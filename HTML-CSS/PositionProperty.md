@@ -4,11 +4,13 @@
 - **absolute** : 위치 상 부모를 기준으로 이동한다.
 - **fixed** : viewport 기준으로 이동해 고정된다.  
 
-**static**![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbZmz3s%2FbtrGfmht1Fn%2FqCojDoNQW3NnsgtG7gZfD1%2Fimg.png)
+## static
+![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbZmz3s%2FbtrGfmht1Fn%2FqCojDoNQW3NnsgtG7gZfD1%2Fimg.png)
 기준이 없는 상태. top과 left값을 줬는데도 position: static 임으로 변함 없다.  
 
 
-**relative**![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fx1rXo%2FbtrGdtBbxOq%2FvIdATzaZJBH7igkyrOKgf0%2Fimg.png)  
+## relative
+![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fx1rXo%2FbtrGdtBbxOq%2FvIdATzaZJBH7igkyrOKgf0%2Fimg.png)  
 
 1. 다른 요소에 영향을 끼치지 않음.
 2. 자신을 기준으로 이동한다.(자기 맘대로 움직인다.)  
@@ -26,7 +28,8 @@ me(2번box)에 position : relative; 를 줬더니, 자기 혼자 top: 100px; lef
 
 
 
-**absolute**![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbFLiK6%2FbtrGfyn334q%2FNtzULAlwqSm2igKTCVNsa0%2Fimg.png)
+## absolute
+![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbFLiK6%2FbtrGfyn334q%2FNtzULAlwqSm2igKTCVNsa0%2Fimg.png)
 1. 부모를 기준으로 이동한다.  
 
 2. 이때 부모를 설정하는 방법은 기준이 되었음 하는 부모에 position:relative; 속성값을 설정한다.  
@@ -41,7 +44,8 @@ me(2번box)에 position : relative; 를 줬더니, 자기 혼자 top: 100px; lef
 2번에만 absolute를 줬을 때는 relative처럼 grandparent 밖으로 나갈 수 있다.(뷰포트를 기준으로 이동함) 하지만 이건 부모 기준을 설정하지 않았기 때문에 가능하다. 위에서 말했듯이 부모를 기준으로 위치할 수 있기 때문에! 부모만 지정해준다면 그 부모를 기준으로 위치할 수 있다.  
 
 
-**fixed**![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FJgwJy%2FbtrGaYbeiMc%2FYNhEYkNxIsATmMeZJ0Gz71%2Fimg.png)  
+## fixed
+![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FJgwJy%2FbtrGaYbeiMc%2FYNhEYkNxIsATmMeZJ0Gz71%2Fimg.png)  
 
 1. position:fixed는 무조건 viewport를 기준으로 이동한다.  
 
