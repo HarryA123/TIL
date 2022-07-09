@@ -105,7 +105,7 @@ github의 내 repository로 돌아오자. 이곳에서 pull request를 하면 �
 # pull(fetch-merge)
 끝!!!인 줄 알았지? 끝이 아니다. 지금까지 내가 최초의 작업 시작자였을 때의 과정을 다루었다.<br/><br/>
 
-<img style="width:300px" src="https://velog.velcdn.com/post-images%2Fimacoolgirlyo%2F27a59a10-5fe3-11e9-940f-3552f642a6fa%2Fgitpushfetch-1.png">
+<img style="width:300px" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FlZGOB%2FbtrGTx9L2lH%2FfRMBOM2zy25sv8fhg3BXrK%2Fimg.png"><h6>출처: https://velog.io/@imacoolgirlyo</h6>
 
 
 내가 다른 팀원의 최신 작업물을 끌어와서 그 위에다가 충돌 없이 작업을 해야 될 때는 어떻게 해야 할까? 두 과정에서 어떤 차이가 있는지 알아보자!<br/><br/><br/><br/>
@@ -119,7 +119,7 @@ git remote 명령으로 현재 프로젝트에 등록된 리모트 저장소를 
 ## ➡ git remote add upstream 팀주소
 
 origin이 아닌 upstream이라는 이름으로 remote 팀주소를 추가한다는 의미다. team repo의 url을 등록할 수 있다.<br/><br/>
-<img style="width:400px" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F8K0X3%2FbtrGSxaThHC%2FkeXSrjSexmEUfi3TSgTDa0%2Fimg.png"><h6>출처: https://velog.io/@imacoolgirlyo</h6><br/><br/><br/>
+<img style="width:400px" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F8K0X3%2FbtrGSxaThHC%2FkeXSrjSexmEUfi3TSgTDa0%2Fimg.png"><br/><br/><br/>
 
 ## ➡ git pull upstream develop
 자, git remote add upstream 팀주소를 쳐서 upstream이라는 팀 저장소를 불러왔다. 이젠 git pull upstream develop을 하면 upstream이라는 저장소를 develop으로 당겨오게 된다. 이 상태에서 ls 해서 확인하면 최신의 작업 현황들을 볼 수 있다.<br/><br/><br/><br/>
