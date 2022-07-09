@@ -1,5 +1,5 @@
 # Git flow
-[🔗git flow install HERE](https://danielkummer.github.io/git-flow-cheatsheet/index.html)<br/>
+[🔗install git flow HERE](https://danielkummer.github.io/git-flow-cheatsheet/index.html)<br/>
 
 - 들어가기 전에...
 
@@ -8,7 +8,12 @@
 
 ## ◼ github fork
 
-팀원은 team organization 에서 이슈를 생성한 뒤에 folk를 한다. 코드를 fork하면 내 github repository에 원작 코드가 그대로 COPY 되어 불러와진다.
+팀원은 team organization 에서 이슈를 생성한 뒤에 fork를 한다.
+
+코드를 fork하면 내 github repository에 원작 코드가 그대로 COPY 되어 불러와진다.<br/>
+<img style="width:400px" src="https://velog.velcdn.com/post-images%2Fimacoolgirlyo%2Fcbe5ca40-5f44-11e9-88b2-25d00148b532%2Fgitfork.png" alt="https://velog.velcdn.com/post-images%2Fimacoolgirlyo%2Fcbe5ca40-5f44-11e9-88b2-25d00148b532%2Fgitfork.png"><h6>출처: https://velog.io/@imacoolgirlyo</h6> fork와 clone의 차이는 분명하다. fork는 team repository를 my repository로 그대로 fork(copy되어) 해오는 것이고 clone은 어떤 repository를 my local에 불러올 때 사용한다.<br/>
+
+
 
 만약 이렇게 해서 생성된 fork를 취소하고 싶다면 그냥 새로 생성된 repository를 삭제하면 된다.<br/><br/><br/><br/>
 
@@ -97,24 +102,31 @@ github의 내 repository로 돌아오자. 이곳에서 pull request를 하면 �
 > Create 버튼을 누르면 입력창이 뜬다. 이때 내가 처음에 생성했던 issue의 해시태그 번호를 가져와(내가 만든 issue 창을 보면 제목 옆에 #번호가 붙어 있다.) close 하면 "#번호 issue 해결(닫음)" 이라는 의미의 문법이 완성된다.<br/><br/><img style="width:300px" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FNIMMt%2FbtrGQ1cGjdx%2FBf2w54BUojc3sPq3J6U9B1%2Fimg.png"><br/> 'close' or 'resolve' 를 사용한다.
 
 <br/><br/><br/>
-# pull request만 하면 끝!!!인 줄 알았지?
-끝이 아니다. 지금까지 내가 최초의 작업 시작자였을 때의 과정을 다루었다.
+# pull(fetch-merge)
+끝!!!인 줄 알았지? 끝이 아니다. 지금까지 내가 최초의 작업 시작자였을 때의 과정을 다루었다.<br/><br/>
 
-근데 만약 내가 다른 팀원의 최신 작업물을 끌어와서 그 위에다가 작업을 해야 될 때는 어떻게 해야 할까? 두 과정에서 어떤 차이가 있는지 알아보자!<br/><br/><br/><br/>
+<img style="width:300px" src="https://velog.velcdn.com/post-images%2Fimacoolgirlyo%2F27a59a10-5fe3-11e9-940f-3552f642a6fa%2Fgitpushfetch-1.png">
 
-## git remote
+
+내가 다른 팀원의 최신 작업물을 끌어와서 그 위에다가 충돌 없이 작업을 해야 될 때는 어떻게 해야 할까? 두 과정에서 어떤 차이가 있는지 알아보자!<br/><br/><br/><br/>
+
+## ➡ git remote
 
 git remote 명령으로 현재 프로젝트에 등록된 리모트 저장소를 확인할 수 있다. 이 명령은 리모트 저장소의 단축 이름을 보여준다. 저장소를 Clone 하면 origin이라는 리모트 저장소가 자동으로 등록되기 때문에 origin이라는 이름을 볼 수 있다.
 
-사용 타이밍: git flow init을 하기 전. 그니까 git clone 주소를 친 후에 이 작업을 하는 게 좋다.<br/><br/><br/><br/>
+사용 타이밍: git flow init을 하기 전. 그니까 git clone 주소를 친 후에 ▼아래의 작업을 하는 게 좋다.<br/><br/><br/><br/>
 
-## git remote add upstream 팀주소
-origin이 아닌 upstream이라는 이름의 remote 팀주소를 추가한다는 의미다. team repo의 url을 등록할 수 있다.<br/><br/><img style="width:400px" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F8K0X3%2FbtrGSxaThHC%2FkeXSrjSexmEUfi3TSgTDa0%2Fimg.png">
-<br/><br/><br/><br/>
+## ➡ git remote add upstream 팀주소
 
-## git pull upstream develop
+origin이 아닌 upstream이라는 이름으로 remote 팀주소를 추가한다는 의미다. team repo의 url을 등록할 수 있다.<br/><br/>
+<img style="width:400px" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F8K0X3%2FbtrGSxaThHC%2FkeXSrjSexmEUfi3TSgTDa0%2Fimg.png"><h6>출처: https://velog.io/@imacoolgirlyo</h6><br/><br/><br/>
+
+## ➡ git pull upstream develop
 자, git remote add upstream 팀주소를 쳐서 upstream이라는 팀 저장소를 불러왔다. 이젠 git pull upstream develop을 하면 upstream이라는 저장소를 develop으로 당겨오게 된다. 이 상태에서 ls 해서 확인하면 최신의 작업 현황들을 볼 수 있다.<br/><br/><br/><br/>
 
-😁나도 이제 git협업 마스터! release는 다음에 알아보자!
+😁나도 이제 git협업 마스터! release는 다음에 알아보자!<br/>
+<img style="width:400px" src="https://www.devguide.at/wp-content/uploads/2019/06/git-basic-commands.png"><h6>출처: https://www.devguide.at/en/git/pull-push-the-remote-repository/</h6>
+위 그림을 알아볼 수 있다면 어느정도 git commands를 이해하고 있다는 의미다.
+
 
 2022.07.08
