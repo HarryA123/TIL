@@ -29,12 +29,30 @@ b = `${a}`
 
 # 숫자형 변환(To Number)
 
-## b = +a
+## b = +a (+ 단항 연산자 unary Operator)
 ```js
 a = '123'
 b = +a
 // 123
+
+a = 'apple'
+b = +a
+// NaN
 ```
+피연산자를 숫자형으로 반환.
+
+## b = -a (- 단항 연산자 unary Operator)
+```js
+a = '123'
+b = -a
+// -123
+
+a = 'apple'
+b = -a
+// NaN
+```
+피연산자를 숫자형(음수)로 반환.
+
 <br/><br/>
 
 ## b = Number(a)
