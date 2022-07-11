@@ -27,7 +27,7 @@ import 함수명 from './함수가 속한 파일명'
 
 그럼에도 불구하고 default는 자주 사용하지 않는 것이 권장된다.<br/><br/><br/><br/>
 
-# import 해서 가져오기를 할 수 있다.
+# import 해서 가져오기
 
 ```
 SYNTAX
