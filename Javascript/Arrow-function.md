@@ -64,11 +64,6 @@ console.log('apple5:', apple5())
 error 가 뜨는 이유는 화살표 함수를 만들 때의 중괄호 기호와 중복되기 때문이다.
 
 object를 화살표 함수로 표현할 때는 ()소괄호를 사용해서 object를 감싸줘야 한다.<br/><br/><br/><br/>
-
- 
-
- 
-
  
 ```js
 const apple5 = (x) => ({'name':'harry'})
