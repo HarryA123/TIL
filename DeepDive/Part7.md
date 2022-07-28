@@ -106,7 +106,7 @@ NaN === NaN // false (NaN는 자신과 일치하지 않다.)
 ```js
 Number.isNaN('5') // true('5'는 넘버가 아니다-> 맞음(true))
 Number.isNaN(5) // false(5는 넘버가 아니다-> 틀림(false))
-Number.isNaN(1+undefined) // true(1+undefined는 NaN를 반환한다. inNaN(NaN) -> 맞음(true)) 
+Number.isNaN(1+undefined) // true(1+undefined는 NaN를 반환한다. Number.isNaN(NaN) -> 맞음(true)) 
 ```
 NaN는 자신과 일치하지 않는 유일한 값이다. 따라서 숫자가 NaN 인지 조사하려면 빌트인 함수 Number.isNaN() 함수를 사용한다. 이 함수는 지정 값이 NaN 인지 확인하고 그 결과를 Boolean으로 반환한다.
 
@@ -182,6 +182,111 @@ false && false // false
 // 0 (0과 null은 false다 논리곱 연산자는 cat부터 true인지 평가를 하다가 false로 평가되는 피연산자를 만나면 그 순간부터 평가를 멈추고 그 피연산자의 값을 반환한다. null 또한 false지만 0이 먼저 평가됐기 때문에 0을 반환한다.)
 ```
 논리합, 논리곱 연산자의 평가결과는 불리언 값이 아닐 수도 있다. 논리합 또는 논리곱 연산자 표현식은 언제나 2개의 피연산자 중 어느 한쪽으로 평가된다.
+
+<br/><br/><br/>
+
+## 문제를 풀어봅시다.
+
+**[문제1]** 
+```js
+let x = 10, result;
+
+// 1번
+result = ++x;
+console.log(result, x)
+
+// 2번
+result= x++;
+console.log(result, x)
+result = x = x + 1
+```
+<details>
+<summary></summary>
+<div markdown="1">       
+1번: 11 11 , 2번: 11 12
+<br/>
+</div>
+</details>
+<br/><br/>
+
+**[문제2]** 
+```
++/- 단항 연산자는 [  a  ]타입으로 변환하여 반환한다.
+- 단항 연산자를 사용하면 [  a  ]타입으로 변환하여 [  b  ]로 반환한다. 
+[  a  ]타입으로 변환되지 않는 string의 경우 [  c  ]를 반환한다.
+```
+<details>
+<summary></summary>
+<div markdown="1">       
+a : 숫자, b : 음수, c : NaN
+<br/>
+</div>
+</details>
+<br/><br/>
+
+**[문제3]**
+```
+기존의 타입을 다른 타입으로 강제 변환하는 것을 [  ?  ]이라고 한다.
+```
+<details>
+<summary></summary>
+<div markdown="1">       
+암묵적 타입 변환
+<br/>
+</div>
+</details>
+<br/><br/>
+
+**[문제4]**
+```
+NaN === NaN 의 평가 결과는 [  a  ] 다.
+
+숫자가 NaN 인지 조사하려면 빌트인 함수 [  b  ] 함수를 사용한다. 이 함수는 지정 값이 NaN 인지 확인하고 그 결과를 Boolean으로 반환한다.
+```
+<details>
+<summary></summary>
+<div markdown="1">       
+a: false, b: Number.isNaN()
+<br/>
+</div>
+</details>
+<br/><br/>
+
+**[문제5]**
+```
+삼항 연산자 표현식은 ____a____이다. 따라서 삼항 연산자 표현식은 값처럼 다른 표현식의 일부가 될 수 있어 매우 유용하다.
+그리고 If...else문은 조건에 따라 수행해야 할 문이 여러 개일 때 가독성 면에서 좋다.
+
+<삼항 연산자는 값처럼 사용 [ b  가능/ 불가능  ], if...else는 [ c  가능/ 불가능  ]>
+```
+<details>
+<summary></summary>
+<div markdown="1">       
+a : 값으로 평가할 수 있는 표현식인 문, b :가능, c : 불가능
+<br/>
+</div>
+</details>
+<br/><br/>
+
+**[문제6]**
+
+아래의 평가 결과는?
+```js
+// 1번
+0 || null && 1
+
+// 2번
+'hello world' && 12321.1 && 10+'1'
+```
+<details>
+<summary></summary>
+<div markdown="1">       
+1번 : null, 2번 : 101
+<br/>
+</div>
+</details>
+<br/><br/>
+
 
 <br/>
 2022.07.28
